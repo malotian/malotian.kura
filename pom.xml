@@ -8,9 +8,6 @@
 	<version>1.0.0</version>
 	<packaging>pom</packaging>
 
-	<modules>
-		<module>kura.application.dht11</module>
-	</modules>
 
 	<properties>
 		<deployment.package.version>0.2.0</deployment.package.version>
@@ -253,4 +250,7 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+	<modules>
+		<module>malotian.kura.dht.kaa.client</module>
+	</modules>
 </project>
