@@ -80,10 +80,9 @@ public class DHTSensor {
 
 		if (isSimulationModeON()) {
 			LOGGER.info("sensor mode: simulation");
-			final int randomInt = RandomUtils.nextInt(1, 1000);
 			timestamp = new Date();
-			temprature = randomInt % 235;
-			humidity = randomInt % 45;
+			temprature = RandomUtils.nextInt(1, 1000) % 45;
+			humidity = RandomUtils.nextInt(1, 1000) % 25;
 			return true; // dummy data
 		}
 
