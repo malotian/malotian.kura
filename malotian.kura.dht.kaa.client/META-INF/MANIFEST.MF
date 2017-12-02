@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: malotian.kura.dht.kaa.client
+Bundle-SymbolicName: malotian.kura.dht.kaa.client
+Bundle-Version: 1.0.0
+Bundle-Vendor: malotian's lab
+Import-Package: org.apache.commons.lang3;version="3.4.0",
+ org.osgi.service.component;version="1.2.2",
+ org.slf4j;version="1.7.21"
+Service-Component: OSGI-INF/*.xml
+Bundle-ClassPath: .,
+ libs/kaa-java-ep-sdk--AmHrC4RCpf34OKySGMNHTxWzH4.jar
+Export-Package: malotian.kura.dht.kaa.client
