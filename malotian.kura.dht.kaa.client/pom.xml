@@ -13,7 +13,7 @@
 		<version>1.0.0</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
-	<artifactId>dht.kaa.client</artifactId>
+	<artifactId>malotian.kura.dht.kaa.client</artifactId>
 	<packaging>eclipse-plugin</packaging>
 	<build>
 		<plugins>
@@ -21,9 +21,6 @@
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-packaging-plugin</artifactId>
 				<version>${tycho-version}</version>
-				<configuration>
-					<format>'${kura.build.version}'</format>
-				</configuration>
 				<executions>
 					<execution>
 						<phase>package</phase>
@@ -32,8 +29,22 @@
 							<goal>package-plugin</goal>
 						</goals>
 						<configuration>
-							<finalName>${project.artifactId}_${project.version}.v${kura.build.version}</finalName>
+							<finalName>${project.artifactId}_${project.version}.${buildQualifier}</finalName>
 						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>de.dentrassi.maven</groupId>
+				<artifactId>osgi-dp</artifactId>
+				<configuration>
+					<useQualifiedFilename>true</useQualifiedFilename>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>build</goal>
+						</goals>
 					</execution>
 				</executions>
 			</plugin>
@@ -79,8 +90,13 @@
 						</lifecycleMappingMetadata>
 					</configuration>
 				</plugin>
+				<plugin>
+					<groupId>de.dentrassi.maven</groupId>
+					<artifactId>osgi-dp</artifactId>
+					<version>0.3.0</version>
+				</plugin>
 			</plugins>
 		</pluginManagement>
 	</build>
-	<groupId>malotian.kura</groupId>
+	<version>1.0.0</version>
 </project>
