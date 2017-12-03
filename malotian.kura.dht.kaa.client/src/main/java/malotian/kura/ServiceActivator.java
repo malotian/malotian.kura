@@ -67,7 +67,6 @@ public class ServiceActivator {
 
 		final DHTSensor dht11 = new DHTSensor(kaaConfiguration.getSensorType(), kaaConfiguration.getGPIOPin());
 		dht11.setSimulationMode(kaaConfiguration.getSimulationMode());
-		dht11.setSimulationMode(true);
 
 		scheduledFuture = scheduledExecutorService.scheduleAtFixedRate(() -> {
 			dht11.read();
